@@ -3,9 +3,10 @@ from datetime import datetime
 from reportlab.lib.pagesizes import legal
 from reportlab.platypus import SimpleDocTemplate, Image, Spacer, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet
+import datetime
 
 START_DECADE = 2020
-END_DECADE = 2020
+END_DECADE = datetime.datetime.now().year - (datetime.datetime.now().year % 10)
 
 
 IMAGES = 'downloaded_images'
